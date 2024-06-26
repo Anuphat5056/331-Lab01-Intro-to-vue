@@ -20,6 +20,10 @@ createApp ({
         ])
         const sockSizes = ref(['S','M','L'])
         const cart = ref(0)
+
+        function addToCart() {
+            cart.value +=1
+        }
     
         return{
             product,
@@ -32,7 +36,8 @@ createApp ({
             details,
             variants,
             sockSizes,
-            cart
+            cart,
+            addToCart
         }
     }
 

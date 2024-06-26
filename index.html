@@ -30,6 +30,8 @@
         <p v-else>Out Of Stock</p>
         <p v-if="onsale == true">on sale</p>
         <p v-else-if="onsale != true">not on sale</p>
+        <p v-if="inStock == true">Can buy</p>
+        <p v-else-if="inStock != true">Can't buy</p>
         <ul>
             <li v-for="detail in details">{{detail}}</li>
         </ul>
@@ -38,6 +40,7 @@
         </div>
         <p><span v-for="sockSize in sockSizes">{{sockSize}}</span></p>
         <button class="button" @click="addToCart">Add To Cart</button>
+        <button class="button" @click="changeStatus">change status</button>
     </div>
 
     <!-- Import Js -->

@@ -24,9 +24,11 @@ createApp ({
         function addToCart() {
             cart.value +=1
         }
-
         function updateImage(variantImage){
             image.value = variantImage
+        }
+        function changeStatus(){
+            inStock.value = !inStock.value;
         }
     
         return{
@@ -42,7 +44,8 @@ createApp ({
             sockSizes,
             cart,
             addToCart,
-            updateImage
+            updateImage,
+            changeStatus
         }
     }
 

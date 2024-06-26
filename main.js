@@ -18,6 +18,7 @@ createApp ({
             { id: 2234, color: 'green'},
             { id: 2235, color: 'blue'}
         ])
+        const sockSizes = ref(['S','M','L'])
     
         return{
             product,
@@ -28,7 +29,8 @@ createApp ({
             inventory,
             onsale,
             details,
-            variants
+            variants,
+            sockSizes
         }
     }
 

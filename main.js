@@ -7,13 +7,15 @@ createApp ({
         const description = ref('this is boots use to walk')
         const click = ref('https://www.camt.cmu.ac.th/index.php/th/')
         const inStock = ref(true)
+        const inventory = ref('100')
     
         return{
             product,
             inStock,
             description,
             image,
-            click
+            click,
+            inventory
         }
     }
 

@@ -19,6 +19,7 @@ createApp ({
             { id: 2235, color: 'blue'}
         ])
         const sockSizes = ref(['S','M','L'])
+        const cart = ref(0)
     
         return{
             product,
@@ -30,7 +31,8 @@ createApp ({
             onsale,
             details,
             variants,
-            sockSizes
+            sockSizes,
+            cart
         }
     }
 

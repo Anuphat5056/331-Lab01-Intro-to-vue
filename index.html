@@ -20,6 +20,9 @@
                 </div>
             </div>
         </div>
+        <div class="product-info">
+            <a :href="click"><h1>{{product}}</h1></a>
+        </div>
         <p>{{description}}</p>
         <p v-if="inStock">In Stock</p>
         <p v-else>Out Of Stock</p>

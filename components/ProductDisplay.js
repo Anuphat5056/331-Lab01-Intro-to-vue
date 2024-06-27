@@ -24,7 +24,10 @@ const productDisplay = {
             <button class="button" :disable='!inStock' @click="addToCart" :class="{'disabledButton': !inStock}">Add To Cart</button>
             <button class="button" @click="changeStatus">{{ inStock ? 'Out of Stock' : 'In Stock' }}</button>
         </div>`,
-        setup() {
+        props: {
+            premium: Boolean
+        },
+        setup(props) {
             const product = ref('boot')
             const brand = ref('SE 311')
             const description = ref('this is boots use to walk')
@@ -80,7 +83,8 @@ const productDisplay = {
                 addToCart,
                 updateImage,
                 changeStatus,
-                updateVariant
+                updateVariant,
+                shipping
             }
         }
 }

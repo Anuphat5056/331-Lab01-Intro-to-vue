@@ -2,10 +2,10 @@ const reviewForm = {
     template: `<form class="review-form">
     <h3>Leave a review</h3>
     <label for="name">Name:</label>
-    <input id="name">
+    <input id="name" v-model="form.name">
 
     <label for = "review">Review:</label>
-    <textarea id="review"></textarea>
+    <textarea id="review" ></textarea>
 
     <label for="rating">Rating:</label>
     <select id="rating">

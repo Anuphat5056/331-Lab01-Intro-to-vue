@@ -36,7 +36,8 @@ const reviewForm = {
             form.rating = null
         }
         return {
-            form
+            form,
+            onSubmit
         }
     }
 }

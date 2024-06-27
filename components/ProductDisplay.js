@@ -1,5 +1,6 @@
 const productDisplay = {
     template:
+        /*html*/
         `<div class="product-display">
             <div class="product-container">
                 <div class="product-image">
@@ -23,8 +24,8 @@ const productDisplay = {
             <button class="button" :disable='!inStock' @click="addToCart" :class="{'disabledButton': !inStock}">Add To Cart</button>
             <button class="button" :disable='!inStock' @click="removeFormCart" :class="{'disabledButton': !inStock}">Remoce from cart</button>
             <button class="button" @click="changeStatus">{{ inStock ? 'Out of Stock' : 'In Stock' }}</button>
+            <review-list v-if="reviews.length" :reviews="reviews"></review-list>
             <review-form @review-submitted="addReview"></review-form>
-            <review-list :reviews="reviews"></review-list>
         </div>`,
         props: {
             premium: Boolean,
@@ -78,7 +79,7 @@ const productDisplay = {
                 selectedVariant.value = index;
             }
             function addReview(review){
-                review.value.push(review)
+                reviews.value.push(review)
             }
         
             return{
@@ -96,7 +97,9 @@ const productDisplay = {
                 updateImage,
                 changeStatus,
                 updateVariant,
-                shipping
+                shipping,
+                reviews,
+                addReview
             }
         }
 }

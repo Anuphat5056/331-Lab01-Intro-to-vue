@@ -1,4 +1,4 @@
-const {createApp, ref} = Vue;
+const {createApp, ref, computed} = Vue;
 
 createApp ({
     setup() {
@@ -22,6 +22,10 @@ createApp ({
         const sockSizes = ref(['S','M','L'])
         const cart = ref(0)
 
+        const title = computed(() =>{
+            return brand.value + ' ' + product.value
+        })
+
         function addToCart() {
             cart.value +=1
         }
@@ -33,8 +37,7 @@ createApp ({
         }
     
         return{
-            product,
-            brand,
+            title,
             inStock,
             description,
             image,

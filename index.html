@@ -29,6 +29,8 @@
             <p v-else>Out Of Stock</p>
             <p v-if="onsale == true">on sale</p>
             <p v-else-if="onsale != true">not on sale</p>
+            <p v-if="sale">on sale</p>
+            <p v-else>Not on sale</p>
             <ul>
                 <li v-for="detail in details">{{detail}}</li>
             </ul>

@@ -13,6 +13,7 @@ const productDisplay = {
             <p v-if="inventory > 10">In Stock</p>
             <p v-else-if = "inventory <= 10 && inventory > 0">Almost out of stock</p>
             <p v-else>Out Of Stock</p>
+            <p> Shipping: {{shipping}}</p>
             <p v-if="onsale == true">on sale</p>
             <p v-else-if="onsale != true">not on sale</p>
             <ul>
@@ -34,6 +35,13 @@ const productDisplay = {
             const click = ref('https://www.camt.cmu.ac.th/index.php/th/')
             const inventory = ref('11')
             const onsale = ref(true)
+            const shipping = computed(()=>{
+                if (props.premium){
+                    return 'Free'
+                } else {
+                    return 30
+                }
+            })
             const details = ref([
                 '50% cotton',
                 '30% wool',

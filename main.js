@@ -6,5 +6,5 @@ createApp ({
         return{
             cart
         }
-
+    }
 }).mount('#app')

@@ -23,7 +23,7 @@ const productDisplay = {
             <button class="button" :disable='!inStock' @click="addToCart" :class="{'disabledButton': !inStock}">Add To Cart</button>
             <button class="button" :disable='!inStock' @click="removeFormCart" :class="{'disabledButton': !inStock}">Remoce from cart</button>
             <button class="button" @click="changeStatus">{{ inStock ? 'Out of Stock' : 'In Stock' }}</button>
-            <review-from></reviewform>
+            <review-form></review-form>
         </div>`,
         props: {
             premium: Boolean,

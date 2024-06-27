@@ -1,4 +1,5 @@
 const reviewList = {
+    /*html*/
     template:`
     <div class="review-container">
         <h3>Reviews:</h3>
@@ -8,6 +9,7 @@ const reviewList = {
             <br/>
             "{{ review.review }}"
             <br/>
+            "recoomend {{review.recommend}}"
         </li>
         </ul>
     </div>

@@ -34,6 +34,7 @@ const reviewForm = {
             form.name = ''
             form.reactive = ''
             form.rating = null
+            console.log(productReview)
         }
         return {
             form,
